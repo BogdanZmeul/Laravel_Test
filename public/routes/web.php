@@ -10,7 +10,7 @@ use App\Http\Controllers\PostController;
 //Route::get('/',[\App\Http\Controllers\HomeController::class,'index']);
 
 Route::group(['namespace'=>'App\Http\Controllers\Post'], function(){
-    //Route::get('/posts', 'IndexController' )->name('post.index');
+    Route::get('/posts', 'IndexController' )->name('post.index');
     Route::get('/posts/create', 'CreateController')->name('post.create');
     Route::post('/posts', 'StoreController')->name('post.store');
     Route::get('/posts/{post}', 'ShowController')->name('post.show');
